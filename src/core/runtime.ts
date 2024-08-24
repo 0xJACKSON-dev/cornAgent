@@ -260,7 +260,7 @@ export class AgentRuntime {
     max_context_length = settings.REMOVED ? "127999" : "8192",
   }) {
     if (!settings.REMOVED) {
-      const completionResponse = await this.llamaService.getCompletionResponse(
+      const completionResponse = await this.llamaService.queueCompletionResponse(
         context,
         temperature,
         stop,
