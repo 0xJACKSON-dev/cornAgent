@@ -134,6 +134,11 @@ export function getTokenForProvider(
                 character.settings?.secrets?.REMOVED ||
                 settings.REMOVED
             );
+        case ModelProviderName.ETERNALAI:
+            return (
+                character.settings?.secrets?.ETERNALAI_API_KEY ||
+                settings.ETERNALAI_API_KEY
+            );
         case ModelProviderName.LLAMACLOUD:
             return (
                 character.settings?.secrets?.LLAMACLOUD_API_KEY ||
