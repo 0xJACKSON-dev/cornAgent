@@ -7,6 +7,7 @@ export const imageGenEnvSchema = z
         TOGETHER_API_KEY: z.string().optional(),
         HEURIST_API_KEY: z.string().optional(),
         FAL_API_KEY: z.string().optional(),
+        REMOVED: z.string().optional(),
     })
     .refine(
         (data) => {
@@ -14,12 +15,13 @@ export const imageGenEnvSchema = z
                 data.ANTHROPIC_API_KEY ||
                 data.TOGETHER_API_KEY ||
                 data.HEURIST_API_KEY ||
-                data.FAL_API_KEY
+                data.FAL_API_KEY ||
+                data.REMOVED
             );
         },
         {
             message:
-                "At least one of ANTHROPIC_API_KEY, TOGETHER_API_KEY, HEURIST_API_KEY or FAL_API_KEY is required",
+                "At least one of ANTHROPIC_API_KEY, TOGETHER_API_KEY, HEURIST_API_KEY, FAL_API_KEY or REMOVED is required",
         }
     );
 
@@ -42,6 +44,9 @@ export async function validateImageGenConfig(
             FAL_API_KEY:
                 runtime.getSetting("FAL_API_KEY") ||
                 process.env.FAL_API_KEY,
+            REMOVED:
+                runtime.getSetting("REMOVED") ||
+                process.env.REMOVED,
         };
 
         return imageGenEnvSchema.parse(config);
