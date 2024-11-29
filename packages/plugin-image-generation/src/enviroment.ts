@@ -42,8 +42,7 @@ export async function validateImageGenConfig(
                 runtime.getSetting("HEURIST_API_KEY") ||
                 process.env.HEURIST_API_KEY,
             FAL_API_KEY:
-                runtime.getSetting("FAL_API_KEY") ||
-                process.env.FAL_API_KEY,
+                runtime.getSetting("FAL_API_KEY") || process.env.FAL_API_KEY,
             REMOVED:
                 runtime.getSetting("REMOVED") ||
                 process.env.REMOVED,
