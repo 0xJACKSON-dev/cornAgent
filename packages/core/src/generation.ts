@@ -902,8 +902,7 @@ export const generateImage = async (
             : (runtime.getSetting("HEURIST_API_KEY") ??
               runtime.getSetting("TOGETHER_API_KEY") ??
               runtime.getSetting("FAL_API_KEY") ??
-              runtime.getSetting("REMOVED") ??
-              runtime.getSetting("VENICE_API_KEY"));
+              runtime.getSetting("REMOVED"));
 
     try {
         if (runtime.imageModelProvider === ModelProviderName.HEURIST) {
