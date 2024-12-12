@@ -43,11 +43,9 @@ jobs:
             - name: Build packages
               run: pnpm build
 
-            - name: Configure an environment
+            - name: Run integration tests
               env:
                   REMOVED: ${{ secrets.REMOVED }}
               run: |
                   env
-
-            - name: Run integration tests
-              run: pnpm run integrationTests
+                  pnpm run integrationTests
