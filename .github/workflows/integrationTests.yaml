@@ -47,4 +47,9 @@ jobs:
               env:
                   REMOVED: ${{ secrets.REMOVED }}
               run: |
-                  pnpm run integrationTests
+                  if [ -z "$REMOVED" ]; then
+                    echo "Skipping integration tests due to missing required API keys"
+                    exit 0
+                  else
+                    pnpm run integrationTests
+                  fi
