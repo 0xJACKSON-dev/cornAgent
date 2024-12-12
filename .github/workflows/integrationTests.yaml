@@ -47,5 +47,4 @@ jobs:
               env:
                   REMOVED: ${{ secrets.REMOVED }}
               run: |
-                  env
                   pnpm run integrationTests
