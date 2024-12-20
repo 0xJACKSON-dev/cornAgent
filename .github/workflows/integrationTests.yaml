@@ -46,5 +46,6 @@ jobs:
             - name: Run integration tests
               env:
                   REMOVED: ${{ secrets.REMOVED }}
+                  COINBASE_COMMERCE_KEY: ${{ secrets.COINBASE_COMMERCE_KEY }}
               run: |
                   pnpm run integrationTests

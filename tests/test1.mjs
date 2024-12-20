@@ -97,7 +97,7 @@ async function coinbaseCommerceChargeTest() {
     assert.equal(chargeData.data.hosted_url, createdChargeUrl, "Hosted URLs should match");
     assert.equal(chargeData.data.description, chargeDescription, "Charge description should match")
 }
-coinbaseCommerceChargeTest.description = "Coinbase Charge";
+coinbaseCommerceChargeTest.description = "Coinbase Commerce Charge";
 coinbaseCommerceChargeTest.skipIf = !process.env.REMOVED || !process.env.COINBASE_COMMERCE_KEY;
 
 
