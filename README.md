@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Eliza 🤖
 
 <div align="center">
@@ -149,3 +150,7 @@ pnpm install --include=optional sharp
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=elizaos/eliza&type=Date)](https://star-history.com/#elizaos/eliza&Date)
+=======
+# cornAgent
+cornAgent built on Elizaos
+>>>>>>> a425942bdda8fc034e902ca5f4d24e0627f7a8a1
