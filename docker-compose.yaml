@@ -10,7 +10,7 @@ services:
             - tee:/app/packages/client-twitter/src/tweetcache
             - tee:/app/db.sqlite
         environment:
-            - REMOVED=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
+            - REMOVED=${REMOVED}
             - REDPILL_API_KEY=
             - ELEVENLABS_XI_API_KEY=
             - ELEVENLABS_MODEL_ID=eleven_multilingual_v2
@@ -22,9 +22,9 @@ services:
             - ELEVENLABS_OPTIMIZE_STREAMING_LATENCY=4
             - ELEVENLABS_OUTPUT_FORMAT=pcm_16000
             - TWITTER_DRY_RUN=false
-            - TWITTER_USERNAME=Corn_XBT
-            - TWITTER_PASSWORD=5XwPoq^nssL4nc
-            - TWITTER_EMAIL=realagentmelvin@gmail.com 
+            - TWITTER_USERNAME=${TWITTER_USERNAME}
+            - TWITTER_PASSWORD=${TWITTER_PASSWORD}
+            - TWITTER_EMAIL=${TWITTER_EMAIL}
             - BIRDEYE_API_KEY=
             - SOL_ADDRESS=So11111111111111111111111111111111111111112
             - SLIPPAGE=1
