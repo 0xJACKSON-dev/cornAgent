@@ -10,7 +10,7 @@ services:
             - tee:/app/packages/client-twitter/src/tweetcache
             - tee:/app/db.sqlite
         environment:
-            - REMOVED=${REMOVED}
+            - REMOVED=YOUR_API_KEY_HERE
             - REDPILL_API_KEY=
             - ELEVENLABS_XI_API_KEY=
             - ELEVENLABS_MODEL_ID=eleven_multilingual_v2
@@ -22,8 +22,8 @@ services:
             - ELEVENLABS_OPTIMIZE_STREAMING_LATENCY=4
             - ELEVENLABS_OUTPUT_FORMAT=pcm_16000
             - TWITTER_DRY_RUN=false
-            - TWITTER_USERNAME=${TWITTER_USERNAME}
-            - TWITTER_PASSWORD=${TWITTER_PASSWORD}
+            - TWITTER_USERNAME=YOUR_USERNAME
+            - TWITTER_PASSWORD=YOUR_PASSWORD
             - TWITTER_EMAIL=${TWITTER_EMAIL}
             - BIRDEYE_API_KEY=
             - SOL_ADDRESS=So11111111111111111111111111111111111111112
