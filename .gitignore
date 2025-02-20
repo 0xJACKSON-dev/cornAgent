@@ -63,3 +63,5 @@ eliza.manifest.sgx
 eliza.sig
 
 docker-compose.yaml
+
+cornAgentV1.ts
