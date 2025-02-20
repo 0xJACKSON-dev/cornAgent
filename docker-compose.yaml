@@ -10,7 +10,7 @@ services:
             - tee:/app/packages/client-twitter/src/tweetcache
             - tee:/app/db.sqlite
         environment:
-            - REMOVED=YOUR_API_KEY_HERE
+            - REMOVED=${YOUR_API_KEY_HERE}
             - REDPILL_API_KEY=
             - ELEVENLABS_XI_API_KEY=
             - ELEVENLABS_MODEL_ID=eleven_multilingual_v2
